@@ -24,6 +24,7 @@
       "sha256": "f1d41fc83a9d2e86cadd0c4e0f9045b48f080bc70042d80afd8c58cc3f0b7354"
     }
   ],
-  "public_unit_tests": 10,
-  "historical_files_unchanged": 94127
+  "public_unit_tests": 11,
+  "historical_files_unchanged": 94127,
+  "archive_obtain_test": "passed through public obtain_data interface with independent local archives"
 }

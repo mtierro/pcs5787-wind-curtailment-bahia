@@ -1,11 +1,13 @@
 """Tests use independent extracted datasets, never the scientific workspace."""
 import hashlib,json,os,tempfile,unittest
+import zipfile
 from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score
 from pcs5787.release_tools import validate,verify_manifest,KEY
 from pcs5787.rebuild_h2_features import rebuild
+from pcs5787.obtain_data import extract
 
 DATA=Path(os.environ.get('PCS5787_DATA','data'))
 
@@ -65,7 +67,7 @@ class PackageTests(unittest.TestCase):
         for d in json.loads((b/'evaluation/bootstrap_diagnostics.json').read_text()):
             nb=d['blocks'];hours=d['block_hours']
             draws=np.random.default_rng(d['seed']).multinomial(nb,np.full(nb,1/nb),size=2000)
-            self.assertEqual(hashlib.sha256(draws.tobytes()).hexdigest(),d['draw_sha256'])
+            self.assertEqual(hashlib.sha256(draws.astype('<i8').tobytes()).hexdigest(),d['draw_sha256'])
             for variant,g in p.groupby('variant'):
                 blocks=((g.time_local-pd.Timestamp('2026-04-01',tz='America/Bahia')).dt.total_seconds()/3600//hours).to_numpy(int)
                 weights=draws[0,blocks]
@@ -74,6 +76,13 @@ class PackageTests(unittest.TestCase):
                 self.assertAlmostEqual(np.average((g.p-g.y)**2,weights=weights),ref.brier,places=12)
 
 class IntegrityNegativeTests(unittest.TestCase):
+    def test_archive_path_traversal_is_rejected_before_extraction(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp);archive=p/'bad.zip'
+            with zipfile.ZipFile(archive,'w') as z:z.writestr('observational/../../outside','untrusted')
+            with self.assertRaisesRegex(ValueError,'Unsafe'):extract(archive,p/'out','observational')
+            self.assertFalse((p/'out').exists())
+
     def test_modified_file_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             p=Path(tmp);(p/'x').write_text('before');h=hashlib.sha256(b'before').hexdigest()

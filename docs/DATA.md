@@ -1,7 +1,30 @@
-# Produtos de dados e estado do depósito
+# Produtos de dados e arquivo científico
 
-Dois produtos relacionados: **Integrated Wind Curtailment and Meteorological Data for Bahia, Brazil (2022–2026)** e **Reproducible Machine Learning Experiments for Wind Curtailment Prediction in Bahia, Brazil**.
+Identificadores reais reservados no Zenodo em 26/11/2026. Na conferência de empacotamento os três registros eram rascunhos; reserva de DOI não significa publicação. Consulte o estado no Zenodo. A comunidade pretendida é [Big Data Analytics Research Group of Escola Politécnica da Universidade de São Paulo](https://zenodo.org/communities/bigdatagroup/); inclusão depende do processo da comunidade.
 
-Os registros Zenodo estão em preparação e dependem da autorização final dos autores antes da publicação. Não existe URL pública de download declarada nesta etapa. A versão local verificável contém `datasets/observational` e `datasets/experiments`; os arquivos finais terão os mesmos nomes de diretório internos. Não inventamos DOI nem apresentamos rascunho como publicação.
+| Produto | DOI reservado | Arquivo principal |
+|---|---|---|
+| Integrated Wind Curtailment and Meteorological Data for Bahia, Brazil (2022–2026) | [10.5281/zenodo.24549469](https://doi.org/10.5281/zenodo.24549469) | `pcs5787_observational_v1.0.0.zip` |
+| Reproducible Machine Learning Experiments for Wind Curtailment Prediction in Bahia, Brazil | [10.5281/zenodo.24549473](https://doi.org/10.5281/zenodo.24549473) | `pcs5787_experiments_v1.0.0.zip` |
+| Software e notebook aprovado | [10.5281/zenodo.24549475](https://doi.org/10.5281/zenodo.24549475) | código v1.0.0 e ZIP aprovado |
 
-Após obter os arquivos autorizados, confira o SHA-256 externo e extraia `observational` e `experiments` lado a lado em `data/`. Cada produto contém MANIFEST.sha256, dicionários, proveniência e README. O software valida todos os hashes antes da inferência. O notebook autossuficiente é distribuído separadamente na release e no registro único de software.
+## Obter e conferir
+
+Depois da publicação dos registros, a partir da raiz do clone:
+
+```bash
+.venv/bin/python -m pcs5787.obtain_data --destination data
+.venv/bin/python -m pcs5787.release_tools validate --data-root data
+```
+
+O comando consulta somente registros públicos, valida o SHA-256 e o tamanho fixados em `configs/publication/products.json`, recusa caminhos inseguros e verifica todos os manifestos internos. Um rascunho ainda não publicado produz erro explícito; não utiliza credenciais ou finge disponibilidade pública.
+
+Para arquivos já baixados ou disponibilizados localmente:
+
+```bash
+.venv/bin/python -m pcs5787.obtain_data --archives /caminho/dos/zips --destination data
+```
+
+A extração cria `data/observational` e `data/experiments`, sem sobrescrever uma pasta existente. Cada produto inclui README, dicionários, proveniência, avisos e manifesto. As duas bases são complementares; a projeção regional não equivale campo a campo à V2 integral de 177 colunas. O software evita duplicar dados no histórico Git.
+
+O notebook autossuficiente está nos ativos da [release v1.0.0](https://github.com/mtierro/pcs5787-wind-curtailment-bahia/releases/tag/v1.0.0) e é incluído explicitamente no único registro Zenodo de software. Não foi ativada integração automática GitHub–Zenodo para duplicar a versão. Os datasets e o software referenciam os demais por seus identificadores reais.

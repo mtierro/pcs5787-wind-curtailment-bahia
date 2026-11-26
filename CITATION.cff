@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Cite esta versão do software e os produtos de dados associados. DOIs serão informados após sua reserva efetiva."
+message: "Cite esta versão e os datasets associados. O DOI foi reservado em 26/11/2026; consulte o estado de publicação no Zenodo."
 title: "Wind Curtailment Prediction in Bahia: Reproducible Data, Models and Scientific Notebook"
 type: software
 version: 1.0.0
@@ -21,3 +21,4 @@ keywords:
   - temporal validation
   - LightGBM
   - feature selection
+doi: "10.5281/zenodo.24549475"

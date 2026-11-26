@@ -53,4 +53,4 @@ python -m pcs5787.release_tools validate --data-root data
 python -m pcs5787.release_tools metrics --data-root data --output metrics.csv
 ```
 
-O primeiro comando verifica todos os hashes e os 24 modelos contra probabilidades históricas (tolerância 1e−12 no ambiente registrado); não treina. Carregue apenas modelos de origem confiável após verificar SHA-256: joblib/pickle pode executar código. `FILES.csv` e `dictionaries/table_schemas.json` descrevem os arquivos tabulares. Fonte de cada arquivo: `provenance/source_manifest.csv`. Condições de uso: [NOTICE.md](NOTICE.md).
+O primeiro comando verifica todos os hashes e os 24 modelos contra probabilidades históricas (tolerância 1e−12 no ambiente registrado); não treina. Carregue apenas modelos de origem confiável após verificar SHA-256: joblib/pickle pode executar código. `FILES.csv` e `dictionaries/table_schemas.json` descrevem os arquivos tabulares. Fonte de cada arquivo: `provenance/source_manifest.csv`. Condições de uso: [NOTICE.md](../NOTICE.md).

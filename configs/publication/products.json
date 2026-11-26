@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "reservation_date": "2026-11-26",
+  "status_at_packaging": "draft; publication requires final authorization",
+  "datasets": [
+    {
+      "directory": "observational",
+      "filename": "pcs5787_observational_v1.0.0.zip",
+      "bytes": 25640090,
+      "sha256": "4d224cdfc578b571a865244b5d975956348a9d89dfa52304fe278b8e8e6d52ad",
+      "record_id": 24549469,
+      "doi": "10.5281/zenodo.24549469"
+    },
+    {
+      "directory": "experiments",
+      "filename": "pcs5787_experiments_v1.0.0.zip",
+      "bytes": 90955900,
+      "sha256": "f1d41fc83a9d2e86cadd0c4e0f9045b48f080bc70042d80afd8c58cc3f0b7354",
+      "record_id": 24549473,
+      "doi": "10.5281/zenodo.24549473"
+    }
+  ],
+  "software_doi": "10.5281/zenodo.24549475"
+}

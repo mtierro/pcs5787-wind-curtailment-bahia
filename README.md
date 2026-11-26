@@ -35,7 +35,7 @@ python3.11 -m venv .venv
 .venv/bin/python -m pip install --no-build-isolation --no-deps .
 ```
 
-Obtenha os dois arquivos de dados conforme [docs/DATA.md](docs/DATA.md), confira checksums e extraia em `data/`. Então:
+Após a publicação Zenodo, obtenha os dois arquivos com `.venv/bin/python -m pcs5787.obtain_data --destination data`; consulte [docs/DATA.md](docs/DATA.md), confira checksums e extraia em `data/`. Então:
 
 ```bash
 .venv/bin/python -m pcs5787.release_tools validate --data-root data
@@ -71,4 +71,4 @@ Os scripts históricos de campanhas são referência metodológica e exigem a or
 
 Inferência e validação cabem em estação Linux com 4 núcleos e memória recomendada de 8 GB; o notebook previamente mediu pico inferior a 3 GB. Não é necessária GPU. Reserve espaço para dados, ambiente e extrações independentes. Cobertura/representatividade meteorológica, snapshot geográfico retrospectivo, latências assumidas, mudança de distribuição e sete blocos na sensibilidade 672h limitam a generalização.
 
-Código próprio MIT; documentação original CC BY 4.0; bases derivadas ODbL com avisos de fontes preservados. ONS, INMET e SIGA/ANEEL devem receber crédito. [CITATION.cff](CITATION.cff) identifica autores/versão; identificadores de arquivo científico constarão em [docs/DATA.md](docs/DATA.md) quando efetivamente reservados/publicados. Nenhum DOI fictício é utilizado.
+Código próprio MIT; documentação original CC BY 4.0; bases derivadas ODbL com avisos de fontes preservados. ONS, INMET e SIGA/ANEEL devem receber crédito. [CITATION.cff](CITATION.cff) identifica autores/versão; os três DOIs reais reservados estão em [docs/DATA.md](docs/DATA.md), com a distinção entre reserva e publicação. Nenhum DOI fictício é utilizado.
