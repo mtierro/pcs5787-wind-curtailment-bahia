@@ -1,0 +1,11 @@
+{
+  "source_root": "importado_grupo",
+  "start": "2022-01-01",
+  "end_exclusive": "2026-10-01",
+  "development_end_exclusive": "2025-01-01",
+  "seed": 5787,
+  "timezone": "America/Bahia",
+  "weather_station_min_development_coverage": 0.5,
+  "station_max_displacement_km": 5,
+  "station_max_distance_km": 200
+}

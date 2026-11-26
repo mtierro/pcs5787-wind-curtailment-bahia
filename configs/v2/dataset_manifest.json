@@ -1,0 +1,16 @@
+{
+  "source_hashes": {
+    "data/processed/v1_reference/regional_hourly.parquet": "e62fe60e57cbca44a20d097f592fc89d5ba7318becd51158e54222ebad27151c",
+    "data/interim/weather.parquet": "8b2b9910729b41f52fea19374b24251126222c4a67136078ebbce9487ec04361",
+    "data/interim/ons.parquet": "bdafadd1e876e9ca82474bbc75a29ee2bdddfc680f6dd01e4e444a8ff20f188e",
+    "metadata/unit_region_monthly.csv": "4a6dbe4e89f241c20b3895bea7f2bc087a0fdd4e84604963d8531a51eb2452d5",
+    "configs/v2/protocol.json": "de6288eced565cae2570fc113823f4006ba5f69d325c6518cdb9c1050b4a5c4e",
+    "context_sources": "8bd4dc23c9b3a1a3a188a205ec5b7b9af6fa26d2fcb60a2e31c5952069a89e91",
+    "data_builder": "039e5b860d7b419e8e603999fba5afe945a1fe5687698191156e70a948c97f49"
+  },
+  "rows": 332928,
+  "columns": 177,
+  "dataset_sha256": "e7a96eb5084f3f0dd05e57bab0307b8adbf9a1b46f30772e4153a2e7bbcf6e6d",
+  "generated_at_utc": "2026-10-13T04:44:56.314551+00:00",
+  "external_labels_used_for_feature_learning": false
+}

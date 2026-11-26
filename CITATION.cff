@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Cite esta versão do software e os produtos de dados associados. DOIs serão informados após sua reserva efetiva."
+title: "Wind Curtailment Prediction in Bahia: Reproducible Data, Models and Scientific Notebook"
+type: software
+version: 1.0.0
+authors:
+  - family-names: "de Paula"
+    given-names: "Matheus T."
+    affiliation: "Escola Politécnica da Universidade de São Paulo"
+  - family-names: "Filho"
+    given-names: "Pedro A. M. A."
+    affiliation: "Escola Politécnica da Universidade de São Paulo"
+  - family-names: "Caetano"
+    given-names: "Robert"
+    affiliation: "Escola Politécnica da Universidade de São Paulo"
+repository-code: "https://github.com/mtierro/pcs5787-wind-curtailment-bahia"
+license: MIT
+keywords:
+  - wind curtailment
+  - Bahia
+  - temporal validation
+  - LightGBM
+  - feature selection

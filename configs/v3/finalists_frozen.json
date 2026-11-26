@@ -1,0 +1,1230 @@
+{
+  "frozen_at_utc": "2026-10-13T17:09:40.067099+00:00",
+  "preparation_commit": "260b333102a1aad22b71f01e6c17adf3955866bb",
+  "historically_blind": false,
+  "external_v3_scores_inspected": false,
+  "data_sha256": "c4a82387fb1642a3c6a0e01ee710fdcd3c95ca6be2b21a70bf93b98b8ef933f5",
+  "external_data_sha256": "9fd37f3c41c4250f4b6f40b4002784dde4407a82ea1f79aa7106292d2394cfec",
+  "oof_sha256": "26656b25604e34f699185aaf12a2ad1147890b28832f9ff7108094334cbd2350",
+  "protocol_sha256": "d2cfaa042ae2504f32f369725780e4b2ac00089455a07bf476e600c87beaaacc",
+  "dependencies_sha256": "3277df6585e3a6feba151bc9875ced0dab16860ef00333a8393c9fe8240bc07e",
+  "code_hashes": {
+    "src/pcs5787/common.py": "c80a427c07179fb00128a3bbb0654d8e91cfa52e23a055d50ccdb4798f646612",
+    "src/pcs5787/v2/common.py": "93e64d1f269df2be6ee5d297478eaaad98d6a4f59f3b35fb095d1f6fd6737f77",
+    "src/pcs5787/v2/evaluation.py": "c36b0e792eb4e72bb7a68404ff0e86ffb119e0fc124339e52f841e021a2775c8",
+    "src/pcs5787/v2/experiments.py": "e97ba84200670c3c80efeb13973cb02ac66b083dde8ba8162937d7910c75c73a",
+    "src/pcs5787/v2/learners.py": "3b71bdf6c06a650f102eb8199505dde731d53be4212a00ae7e28e86723c56736",
+    "src/pcs5787/v3/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/pcs5787/v3/ablation.py": "3089590faaa6fbf9cd51a93cefabecc6ca8d42cbaed48744446b50b0fb036b8a",
+    "src/pcs5787/v3/audit.py": "a5a119c977d1596c4e987b5eaf943e496a89f8d4a86e7906b16cc5ff99f62a13",
+    "src/pcs5787/v3/common.py": "d6b4443f60f3eb531eaf983ed214b9d55095cadb7c3505882780b887c653fd26",
+    "src/pcs5787/v3/data.py": "2f4f0faee554cb58c60ba098ca18e65e9f0a2fe2165f0112dc70747ffe76bb66",
+    "src/pcs5787/v3/diagnostics.py": "445c8b7a5b164512975ad6bab9b303c73950b4777c1d0895df541a56343a4b75",
+    "src/pcs5787/v3/engine.py": "1c627b3a3e55a81f005fe2fc5a0685335e38b60a2693a87944d289a5e7f05a1b",
+    "src/pcs5787/v3/evaluation.py": "c914f3c8cb963a0782efc82db5ea44f6efa712b85eff934dfb7e05c110f5ce83",
+    "src/pcs5787/v3/experiments.py": "e51f7b4f160dfa4419c9cdeffc86ebaa32ed7bd6316f370030de32dc8234e42c",
+    "src/pcs5787/v3/external_data.py": "987a3a930e90e829d747a5fc8fd4dfcef24b94fd2d68698df9376ea9432f522f",
+    "src/pcs5787/v3/external_experiments.py": "340d40210ddecde7ad2004c12a66a246fc4ecaa9ae04149bb01bcfe2ae2847cc",
+    "src/pcs5787/v3/external_refinement.py": "4c2aa8eb054a8536dfa33830a0f4c03417a6d18745e55255e9878de023a1af9e",
+    "src/pcs5787/v3/final_campaign.py": "d9ad635c3246a43b077aede79bc42428a8fdace46f92bdd9d5405ba7cc1b6ce0",
+    "src/pcs5787/v3/freeze.py": "dbb6f029e44f8eb42f87df7cb2122fe57aa99ac007ee1d184a60dc08cb3b53c1",
+    "src/pcs5787/v3/magnitude.py": "edcd98764fe21b4ad022a0091877fc943591f0ea7ae51935447cfff6f05bea93",
+    "src/pcs5787/v3/magnitude_controls.py": "7d2127151a1a6f49ae05a6da1e0905aa3f4e88e36f1390ce7a1430880a963ddc",
+    "src/pcs5787/v3/magnitude_refinement.py": "5356f9f578dcb9ec4bc0b9afa81e87eb838e72660bfa7033748e2d34604725e8",
+    "src/pcs5787/v3/models.py": "8850cc192e4b3f5d176c58aa09707dbf501e52b7ca5e27d473ba8fa40cee3c2a",
+    "src/pcs5787/v3/multiscale.py": "29ba6b8336578c6baa347b805a3f21be1e25eac0983283b84477b0098e6bad4b",
+    "src/pcs5787/v3/rare.py": "91c3fbfa38bec7655bd01207096e17a5dc02a7dfcd98628f6af77a21df0e6bb8",
+    "src/pcs5787/v3/refinement.py": "c0958422b5b74bf15e9a8ce2016f4449944d24d71043beee4f5e3db4f1de74fc",
+    "tests/test_v3.py": "7318f4bd872caa6f62a0d7d6cc754c43b538b4d475bbe6586d965f70bbfe8fae"
+  },
+  "classification": [
+    {
+      "system": "A_tree",
+      "kind": "base",
+      "base": "A_tree",
+      "threshold": 0.36000000000000004,
+      "budget_thresholds": {
+        "0.05": 0.9405561261122705,
+        "0.1": 0.8842715560977127,
+        "0.2": 0.7501629430382861
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "A_log",
+      "kind": "base",
+      "base": "A_log",
+      "threshold": 0.06999999999999999,
+      "budget_thresholds": {
+        "0.05": 0.37640853508198413,
+        "0.1": 0.19264582563463145,
+        "0.2": 0.10083318216754544
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "B_v2",
+      "kind": "base",
+      "base": "B_v2",
+      "threshold": 0.49,
+      "budget_thresholds": {
+        "0.05": 0.939571521105006,
+        "0.1": 0.864850020978798,
+        "0.2": 0.6894135738686143
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "A_multiscale",
+      "kind": "multiscale",
+      "config": {
+        "name": "multi_A",
+        "branch": "A_tree"
+      },
+      "selection": "log_loss",
+      "weight_log": 0.5,
+      "threshold": 0.15000000000000002,
+      "budget_thresholds": {
+        "0.05": 0.7345275998853584,
+        "0.1": 0.5585859277414494,
+        "0.2": 0.36879012546150264
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "B_multiscale_v2",
+      "kind": "multiscale",
+      "config": {
+        "name": "multi_B_v2",
+        "branch": "B_v2"
+      },
+      "selection": "log_loss",
+      "weight_log": 0.25,
+      "threshold": 0.25,
+      "budget_thresholds": {
+        "0.05": 0.8651531382378759,
+        "0.1": 0.7358282856115208,
+        "0.2": 0.5089645694341112
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "B_multiscale_trajectory",
+      "kind": "multiscale",
+      "config": {
+        "name": "multi_trajectory",
+        "branch": "joint",
+        "joint": {
+          "name": "joint_sensor_trajectory",
+          "groups": [
+            "sensor_trajectory",
+            "missing"
+          ],
+          "penalty": 40,
+          "months": 3,
+          "kind": "joint",
+          "source_A": "A_tree"
+        }
+      },
+      "selection": "log_loss",
+      "weight_log": 0.25,
+      "threshold": 0.24000000000000002,
+      "budget_thresholds": {
+        "0.05": 0.8654244971833728,
+        "0.1": 0.733903519429214,
+        "0.2": 0.5288500629481915
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "B_joint_trajectory",
+      "kind": "joint",
+      "config": {
+        "name": "joint_sensor_trajectory",
+        "groups": [
+          "sensor_trajectory",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      },
+      "selection": "log_loss",
+      "strength": 1.0,
+      "threshold": 0.39,
+      "budget_thresholds": {
+        "0.05": 0.9383302100586722,
+        "0.1": 0.8640012314293206,
+        "0.2": 0.7072492419559525
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "A_score",
+      "kind": "correction",
+      "config": {
+        "kind": "linear",
+        "calendar": false,
+        "penalty": 1000,
+        "leaves": 3,
+        "iterations": 100,
+        "source_A": "A_log",
+        "name": "log_ridge_score_3",
+        "groups": [],
+        "months": 3
+      },
+      "selection": "log_loss",
+      "strength": 0.5,
+      "threshold": 0.13,
+      "budget_thresholds": {
+        "0.05": 0.5815824352657804,
+        "0.1": 0.36050549667764537,
+        "0.2": 0.21292256286529232
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "B_inmet_offset",
+      "kind": "correction",
+      "config": {
+        "kind": "linear",
+        "calendar": false,
+        "penalty": 1000,
+        "leaves": 3,
+        "iterations": 100,
+        "source_A": "A_log",
+        "name": "log_ridge_weather_3",
+        "groups": [
+          "v2"
+        ],
+        "months": 3
+      },
+      "selection": "ap",
+      "strength": 0.0,
+      "threshold": 0.06999999999999999,
+      "budget_thresholds": {
+        "0.05": 0.37640853508198413,
+        "0.1": 0.19264582563463145,
+        "0.2": 0.10083318216754544
+      },
+      "source_class": "measured_or_calendar"
+    },
+    {
+      "system": "B_nwp_AP",
+      "kind": "external",
+      "config": {
+        "penalty": 1000,
+        "months": 3,
+        "source_A": "A_log",
+        "kind": "linear",
+        "calendar": false,
+        "leaves": 7,
+        "iterations": 180,
+        "name": "ext_logcorr_ifs025_day1",
+        "source": "ifs025_day1",
+        "variables": [
+          "wind_speed_10m",
+          "wind_speed_100m",
+          "u100",
+          "v100",
+          "shear",
+          "shortwave_radiation"
+        ]
+      },
+      "selection": "ap",
+      "source_class": "forecast_scenario",
+      "strength": 0.0,
+      "threshold": 0.06999999999999999,
+      "budget_thresholds": {
+        "0.05": 0.37640853508198413,
+        "0.1": 0.19264582563463145,
+        "0.2": 0.10083318216754544
+      }
+    },
+    {
+      "system": "B_nwp_probability",
+      "kind": "external",
+      "config": {
+        "penalty": 1000,
+        "months": 3,
+        "source_A": "A_log",
+        "kind": "linear",
+        "calendar": false,
+        "leaves": 7,
+        "iterations": 180,
+        "name": "ext_logcorr_ifs025_day1",
+        "source": "ifs025_day1",
+        "variables": [
+          "wind_speed_10m",
+          "wind_speed_100m",
+          "u100",
+          "v100",
+          "shear",
+          "shortwave_radiation"
+        ]
+      },
+      "selection": "log_loss",
+      "source_class": "forecast_scenario",
+      "strength": 0.5,
+      "threshold": 0.11,
+      "budget_thresholds": {
+        "0.05": 0.561079302464806,
+        "0.1": 0.34430447009571935,
+        "0.2": 0.19539716065892568
+      }
+    },
+    {
+      "system": "Oracle_ERA5",
+      "kind": "external",
+      "config": {
+        "penalty": 1000,
+        "months": 3,
+        "source_A": "A_log",
+        "kind": "linear",
+        "calendar": false,
+        "leaves": 7,
+        "iterations": 180,
+        "name": "ext_logcorr_era5",
+        "source": "era5",
+        "variables": [
+          "wind_speed_10m",
+          "wind_speed_100m",
+          "u100",
+          "v100",
+          "shear",
+          "shortwave_radiation"
+        ]
+      },
+      "selection": "log_loss",
+      "source_class": "oracle",
+      "strength": 0.5,
+      "threshold": 0.12,
+      "budget_thresholds": {
+        "0.05": 0.5526215609207711,
+        "0.1": 0.3417406199338452,
+        "0.2": 0.19142953778460822
+      }
+    }
+  ],
+  "magnitude": [
+    {
+      "system": "Mag_V2_A",
+      "config": {
+        "name": "direct_A_half_life180",
+        "kind": "direct",
+        "groups": [],
+        "strategy": "half_life180",
+        "leaves": 31,
+        "penalty": 20
+      }
+    },
+    {
+      "system": "Mag_V2_B",
+      "config": {
+        "name": "direct_B_half_life180",
+        "kind": "direct",
+        "groups": [
+          "v2"
+        ],
+        "strategy": "half_life180",
+        "leaves": 31,
+        "penalty": 20
+      }
+    },
+    {
+      "system": "Mag_A_best",
+      "config": {
+        "name": "mag_control_direct_A_window1",
+        "kind": "direct",
+        "groups": [],
+        "strategy": "window1",
+        "leaves": 31,
+        "penalty": 20
+      }
+    },
+    {
+      "system": "Mag_B_direct1",
+      "config": {
+        "name": "mag_control_direct_B_window1",
+        "kind": "direct",
+        "groups": [
+          "v2"
+        ],
+        "strategy": "window1",
+        "leaves": 31,
+        "penalty": 20
+      }
+    },
+    {
+      "system": "Mag_A_hurdle6",
+      "config": {
+        "kind": "hurdle",
+        "groups": [],
+        "strategy": "window6",
+        "leaves": 31,
+        "penalty": 20,
+        "name": "mag_refine_A_window6"
+      }
+    },
+    {
+      "system": "Mag_B_hurdle6",
+      "config": {
+        "kind": "hurdle",
+        "groups": [
+          "v2"
+        ],
+        "strategy": "window6",
+        "leaves": 31,
+        "penalty": 20,
+        "name": "mag_refine_B_window6"
+      }
+    },
+    {
+      "system": "Mag_B_direct6",
+      "config": {
+        "name": "mag_control_direct_B_window6",
+        "kind": "direct",
+        "groups": [
+          "v2"
+        ],
+        "strategy": "window6",
+        "leaves": 31,
+        "penalty": 20
+      }
+    },
+    {
+      "system": "Mag_A_distribution",
+      "config": {
+        "name": "mag_control_hurdle_A_smooth",
+        "kind": "hurdle",
+        "groups": [],
+        "strategy": "window3",
+        "leaves": 7,
+        "penalty": 100
+      }
+    },
+    {
+      "system": "Mag_B_distribution",
+      "config": {
+        "kind": "hurdle",
+        "groups": [
+          "v2"
+        ],
+        "strategy": "window3",
+        "leaves": 7,
+        "penalty": 100,
+        "name": "mag_refine_B_smooth"
+      }
+    },
+    {
+      "system": "Mag_B_direct_smooth",
+      "config": {
+        "name": "mag_control_direct_B_smooth",
+        "kind": "direct",
+        "groups": [
+          "v2"
+        ],
+        "strategy": "window3",
+        "leaves": 7,
+        "penalty": 100
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_log",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_nwp_AP - P1:A_log"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_score",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_nwp_AP - P1:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_tree",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_nwp_AP - P1:A_tree"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_multiscale",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_nwp_AP - P1:A_multiscale"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "B_v2",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_nwp_AP - P1:B_v2"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "B_inmet_offset",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_nwp_AP - P1:B_inmet_offset"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_probability",
+      "minus": "A_score",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_nwp_probability - P1:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "Oracle_ERA5",
+      "minus": "A_score",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Oracle_ERA5 - P1:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "Oracle_ERA5",
+      "minus": "B_nwp_probability",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Oracle_ERA5 - P1:B_nwp_probability"
+    },
+    {
+      "task": "classification",
+      "plus": "B_inmet_offset",
+      "minus": "A_score",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_inmet_offset - P1:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "B_joint_trajectory",
+      "minus": "A_tree",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_joint_trajectory - P1:A_tree"
+    },
+    {
+      "task": "classification",
+      "plus": "B_joint_trajectory",
+      "minus": "B_v2",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_joint_trajectory - P1:B_v2"
+    },
+    {
+      "task": "classification",
+      "plus": "B_multiscale_trajectory",
+      "minus": "A_multiscale",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_multiscale_trajectory - P1:A_multiscale"
+    },
+    {
+      "task": "classification",
+      "plus": "B_multiscale_trajectory",
+      "minus": "B_multiscale_v2",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:B_multiscale_trajectory - P1:B_multiscale_v2"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_V2_B",
+      "minus": "Mag_V2_A",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_V2_B - P1:Mag_V2_A"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_A_best",
+      "minus": "Mag_V2_A",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_A_best - P1:Mag_V2_A"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_A_best",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_B_hurdle6 - P1:Mag_A_best"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_A_hurdle6",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_B_hurdle6 - P1:Mag_A_hurdle6"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_B_direct6",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_B_hurdle6 - P1:Mag_B_direct6"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_V2_B",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_B_hurdle6 - P1:Mag_V2_B"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_direct1",
+      "minus": "Mag_A_best",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_B_direct1 - P1:Mag_A_best"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_distribution",
+      "minus": "Mag_A_distribution",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_B_distribution - P1:Mag_A_distribution"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_distribution",
+      "minus": "Mag_A_best",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_B_distribution - P1:Mag_A_best"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_distribution",
+      "minus": "Mag_B_direct_smooth",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:Mag_B_distribution - P1:Mag_B_direct_smooth"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_log",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_nwp_AP - P2:A_log"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_score",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_nwp_AP - P2:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_tree",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_nwp_AP - P2:A_tree"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_multiscale",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_nwp_AP - P2:A_multiscale"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "B_v2",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_nwp_AP - P2:B_v2"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "B_inmet_offset",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_nwp_AP - P2:B_inmet_offset"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_probability",
+      "minus": "A_score",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_nwp_probability - P2:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "Oracle_ERA5",
+      "minus": "A_score",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Oracle_ERA5 - P2:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "Oracle_ERA5",
+      "minus": "B_nwp_probability",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Oracle_ERA5 - P2:B_nwp_probability"
+    },
+    {
+      "task": "classification",
+      "plus": "B_inmet_offset",
+      "minus": "A_score",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_inmet_offset - P2:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "B_joint_trajectory",
+      "minus": "A_tree",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_joint_trajectory - P2:A_tree"
+    },
+    {
+      "task": "classification",
+      "plus": "B_joint_trajectory",
+      "minus": "B_v2",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_joint_trajectory - P2:B_v2"
+    },
+    {
+      "task": "classification",
+      "plus": "B_multiscale_trajectory",
+      "minus": "A_multiscale",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_multiscale_trajectory - P2:A_multiscale"
+    },
+    {
+      "task": "classification",
+      "plus": "B_multiscale_trajectory",
+      "minus": "B_multiscale_v2",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:B_multiscale_trajectory - P2:B_multiscale_v2"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_V2_B",
+      "minus": "Mag_V2_A",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_V2_B - P2:Mag_V2_A"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_A_best",
+      "minus": "Mag_V2_A",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_A_best - P2:Mag_V2_A"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_A_best",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_B_hurdle6 - P2:Mag_A_best"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_A_hurdle6",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_B_hurdle6 - P2:Mag_A_hurdle6"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_B_direct6",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_B_hurdle6 - P2:Mag_B_direct6"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_V2_B",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_B_hurdle6 - P2:Mag_V2_B"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_direct1",
+      "minus": "Mag_A_best",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_B_direct1 - P2:Mag_A_best"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_distribution",
+      "minus": "Mag_A_distribution",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_B_distribution - P2:Mag_A_distribution"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_distribution",
+      "minus": "Mag_A_best",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_B_distribution - P2:Mag_A_best"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_distribution",
+      "minus": "Mag_B_direct_smooth",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:Mag_B_distribution - P2:Mag_B_direct_smooth"
+    },
+    {
+      "task": "classification",
+      "plus": "A_tree",
+      "minus": "A_tree",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:A_tree - P1:A_tree"
+    },
+    {
+      "task": "classification",
+      "plus": "A_log",
+      "minus": "A_log",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:A_log - P1:A_log"
+    },
+    {
+      "task": "classification",
+      "plus": "B_v2",
+      "minus": "B_v2",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:B_v2 - P1:B_v2"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "B_nwp_AP",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:B_nwp_AP - P1:B_nwp_AP"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_probability",
+      "minus": "B_nwp_probability",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:B_nwp_probability - P1:B_nwp_probability"
+    },
+    {
+      "task": "classification",
+      "plus": "A_score",
+      "minus": "A_score",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:A_score - P1:A_score"
+    },
+    {
+      "task": "classification",
+      "plus": "A_tree",
+      "minus": "A_tree",
+      "protocol_plus": "P1",
+      "protocol_minus": "P0_2025",
+      "label": "P1:A_tree - P0_2025:A_tree"
+    },
+    {
+      "task": "classification",
+      "plus": "A_log",
+      "minus": "A_log",
+      "protocol_plus": "P1",
+      "protocol_minus": "P0_2025",
+      "label": "P1:A_log - P0_2025:A_log"
+    },
+    {
+      "task": "classification",
+      "plus": "B_v2",
+      "minus": "B_v2",
+      "protocol_plus": "P1",
+      "protocol_minus": "P0_2025",
+      "label": "P1:B_v2 - P0_2025:B_v2"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_A_best",
+      "minus": "Mag_A_best",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:Mag_A_best - P1:Mag_A_best"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_hurdle6",
+      "minus": "Mag_B_hurdle6",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:Mag_B_hurdle6 - P1:Mag_B_hurdle6"
+    },
+    {
+      "task": "magnitude",
+      "plus": "Mag_B_distribution",
+      "minus": "Mag_B_distribution",
+      "protocol_plus": "P2",
+      "protocol_minus": "P1",
+      "label": "P2:Mag_B_distribution - P1:Mag_B_distribution"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_score",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:NWP-score exclude_A423_A426",
+      "fleet_scope": "exclude_A423_A426"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_score",
+      "protocol_plus": "P1",
+      "protocol_minus": "P1",
+      "label": "P1:NWP-score only_A423_A426",
+      "fleet_scope": "only_A423_A426"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_score",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:NWP-score exclude_A423_A426",
+      "fleet_scope": "exclude_A423_A426"
+    },
+    {
+      "task": "classification",
+      "plus": "B_nwp_AP",
+      "minus": "A_score",
+      "protocol_plus": "P2",
+      "protocol_minus": "P2",
+      "label": "P2:NWP-score only_A423_A426",
+      "fleet_scope": "only_A423_A426"
+    }
+  ],
+  "selection": [
+    {
+      "system": "A_multiscale",
+      "selection": "log_loss",
+      "chosen": 0.5,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.7507363338379208,
+          "log_loss": 0.36886900996246785
+        },
+        {
+          "value": 0.25,
+          "ap": 0.7543532639517722,
+          "log_loss": 0.33074645099063404
+        },
+        {
+          "value": 0.5,
+          "ap": 0.75433816026398,
+          "log_loss": 0.3304354274683338
+        },
+        {
+          "value": 0.75,
+          "ap": 0.7480427610060867,
+          "log_loss": 0.3683671283777615
+        },
+        {
+          "value": 1.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.4395491659217037
+        }
+      ]
+    },
+    {
+      "system": "B_multiscale_v2",
+      "selection": "log_loss",
+      "chosen": 0.25,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.7507830778674659,
+          "log_loss": 0.35252696847359316
+        },
+        {
+          "value": 0.25,
+          "ap": 0.7555864269783125,
+          "log_loss": 0.32366786400505887
+        },
+        {
+          "value": 0.5,
+          "ap": 0.7559750147720763,
+          "log_loss": 0.32933448372257934
+        },
+        {
+          "value": 0.75,
+          "ap": 0.7491354439404638,
+          "log_loss": 0.36944290469274255
+        },
+        {
+          "value": 1.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.4395491659217037
+        }
+      ]
+    },
+    {
+      "system": "B_multiscale_trajectory",
+      "selection": "log_loss",
+      "chosen": 0.25,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.7487586154821868,
+          "log_loss": 0.3549411045595875
+        },
+        {
+          "value": 0.25,
+          "ap": 0.7526927470709511,
+          "log_loss": 0.325076212505827
+        },
+        {
+          "value": 0.5,
+          "ap": 0.7532530065508933,
+          "log_loss": 0.3300085920760065
+        },
+        {
+          "value": 0.75,
+          "ap": 0.7477364670045924,
+          "log_loss": 0.3696737993269036
+        },
+        {
+          "value": 1.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.4395491659217037
+        }
+      ]
+    },
+    {
+      "system": "B_joint_trajectory",
+      "selection": "log_loss",
+      "chosen": 1.0,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.7507363338379208,
+          "log_loss": 0.36886900996246785
+        },
+        {
+          "value": 0.25,
+          "ap": 0.7523928419986866,
+          "log_loss": 0.364149589501308
+        },
+        {
+          "value": 0.5,
+          "ap": 0.7523687187370677,
+          "log_loss": 0.36024853757528996
+        },
+        {
+          "value": 1.0,
+          "ap": 0.7487586154821868,
+          "log_loss": 0.3549411045595875
+        }
+      ]
+    },
+    {
+      "system": "A_score",
+      "selection": "log_loss",
+      "chosen": 0.5,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.4395491659217037
+        },
+        {
+          "value": 0.25,
+          "ap": 0.734589365189197,
+          "log_loss": 0.37028177664770073
+        },
+        {
+          "value": 0.5,
+          "ap": 0.734589365189197,
+          "log_loss": 0.3322645856457942
+        },
+        {
+          "value": 1.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.36362889059057296
+        }
+      ]
+    },
+    {
+      "system": "B_inmet_offset",
+      "selection": "ap",
+      "chosen": 0.0,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.4395491659217037
+        },
+        {
+          "value": 0.25,
+          "ap": 0.7323646369266041,
+          "log_loss": 0.37529056112982706
+        },
+        {
+          "value": 0.5,
+          "ap": 0.7268172459459294,
+          "log_loss": 0.3425202480356802
+        },
+        {
+          "value": 1.0,
+          "ap": 0.7108977504714036,
+          "log_loss": 0.3784212770987566
+        }
+      ]
+    },
+    {
+      "system": "B_nwp_AP",
+      "selection": "ap",
+      "chosen": 0.0,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.4395491659217037
+        },
+        {
+          "value": 0.25,
+          "ap": 0.7322459987799289,
+          "log_loss": 0.3734697286095223
+        },
+        {
+          "value": 0.5,
+          "ap": 0.7282346412910569,
+          "log_loss": 0.3385484418936969
+        },
+        {
+          "value": 1.0,
+          "ap": 0.7147463185903177,
+          "log_loss": 0.3685539744211147
+        }
+      ]
+    },
+    {
+      "system": "B_nwp_probability",
+      "selection": "log_loss",
+      "chosen": 0.5,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.4395491659217037
+        },
+        {
+          "value": 0.25,
+          "ap": 0.7322459987799289,
+          "log_loss": 0.3734697286095223
+        },
+        {
+          "value": 0.5,
+          "ap": 0.7282346412910569,
+          "log_loss": 0.3385484418936969
+        },
+        {
+          "value": 1.0,
+          "ap": 0.7147463185903177,
+          "log_loss": 0.3685539744211147
+        }
+      ]
+    },
+    {
+      "system": "Oracle_ERA5",
+      "selection": "log_loss",
+      "chosen": 0.5,
+      "means": [
+        {
+          "value": 0.0,
+          "ap": 0.734589365189197,
+          "log_loss": 0.4395491659217037
+        },
+        {
+          "value": 0.25,
+          "ap": 0.7343639909561077,
+          "log_loss": 0.3737362135288973
+        },
+        {
+          "value": 0.5,
+          "ap": 0.7319353472036353,
+          "log_loss": 0.33740148106054874
+        },
+        {
+          "value": 1.0,
+          "ap": 0.7203504667526085,
+          "log_loss": 0.36076545819283146
+        }
+      ]
+    }
+  ],
+  "seeds": [
+    5787,
+    1909,
+    2718
+  ],
+  "rules": {
+    "p0": "Jan2025 frozen A_tree/A_log/B_v2; same current architectures, not a relabeling of V1",
+    "p1": "April2026 refit once; all three seeds",
+    "p2": "monthly refit primary seed; all lambda/weights/thresholds unchanged; OOF history extends only with prior monthly forecasts and labels available by cutoff",
+    "calibration": "none after refit; OOF correction itself is learned calibration/weather stage; assess transfer directly",
+    "threshold": "F1 on grid.01-.99 from Jan1-Mar24 22/2026 predictions using final coefficients; validation reused for selection and threshold, explicitly exploratory",
+    "coverage": "Observed ONS BA & INMET spatial; external common mask all six fields ERA5, ERA5lag2,IFS025 D1; original A retains full training population",
+    "seeds": "Upstream OOF primary seed fixed. Three seeds test final fit randomization; do not integrate selection uncertainty",
+    "fleet_sensitivity": "Exclude A423/A426 with known state-scope differences as a prespecified sensitivity, not corrected truth",
+    "nwp": "D1 provider semantics, assumed publication<=6h; no delivery timestamp audit",
+    "oracle": "ERA5 simultaneous and lagged reanalysis never admissible operational inputs",
+    "selection_rationale": "NWP offset has largest mean AP among refined forecast candidates but worsens F3; retain exploratory. Multiscale A is stronger mean ranking calendar; A_tree/log/score retained. Magnitude best A directwindow1; best MAE B hurdle6 and proper-score B smooth, with paired architecture/memory controls. Rare trajectory did not beat V2; no new rare finalist."
+  }
+}

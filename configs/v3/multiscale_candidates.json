@@ -1,0 +1,41 @@
+[
+  {
+    "name": "multi_A",
+    "branch": "A_tree"
+  },
+  {
+    "name": "multi_B_v2",
+    "branch": "B_v2"
+  },
+  {
+    "name": "multi_trajectory",
+    "branch": "joint",
+    "joint": {
+      "name": "joint_sensor_trajectory",
+      "groups": [
+        "sensor_trajectory",
+        "missing"
+      ],
+      "penalty": 40,
+      "months": 3,
+      "kind": "joint",
+      "source_A": "A_tree"
+    }
+  },
+  {
+    "name": "multi_coherence",
+    "branch": "joint",
+    "joint": {
+      "name": "joint_coherence",
+      "groups": [
+        "aggregate_trajectory",
+        "coherence",
+        "missing"
+      ],
+      "penalty": 40,
+      "months": 3,
+      "kind": "joint",
+      "source_A": "A_tree"
+    }
+  }
+]

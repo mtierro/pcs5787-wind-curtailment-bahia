@@ -1,0 +1,10 @@
+{
+  "created_at_utc": "2026-11-22T21:58:28.558484+00:00",
+  "selection_sha256": "ce82cabe3a12b604f92a7b7ff14907dbf17f406c6a20ed2c36c61bf10f2634c3",
+  "feature_lists": {
+    "primary": "292987500a5cf2daaa1bac0e970da2c100d9d86bbcf84a8046cc5fd64e1b4aa5",
+    "sensitivity": "f67aee8552c61b49292c4c4e85634c99e8e7e4406363e8673c3c79823e63a462"
+  },
+  "protocol_sha256": "3c27372a58992ee67b94710763370edf2e5de3cc045c490208c35d8c9281a3d9",
+  "final_evaluation_executed": false
+}

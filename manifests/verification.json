@@ -1,0 +1,29 @@
+{
+  "environment": "Python 3.11.17; fresh venv, pinned dependencies installed",
+  "scientific_checks": 124,
+  "all_passed": true,
+  "models_verified": 24,
+  "maximum_probability_error": 0.0,
+  "notebook_code_cells": 102,
+  "notebook_tests": 44,
+  "notebook_execution_seconds": 28.42266415001359,
+  "notebook_peak_rss_kib": 2941900,
+  "scientific_workspace_access": "blocked by external audit hook during notebook execution",
+  "network": "external connections blocked during notebook execution",
+  "optional_imports": "LightGBM, SHAP and PyArrow intentionally disabled in notebook guard",
+  "new_model_training": false,
+  "dataset_archives": [
+    {
+      "file": "pcs5787_observational_v1.0.0.zip",
+      "bytes": 25640090,
+      "sha256": "4d224cdfc578b571a865244b5d975956348a9d89dfa52304fe278b8e8e6d52ad"
+    },
+    {
+      "file": "pcs5787_experiments_v1.0.0.zip",
+      "bytes": 90955900,
+      "sha256": "f1d41fc83a9d2e86cadd0c4e0f9045b48f080bc70042d80afd8c58cc3f0b7354"
+    }
+  ],
+  "public_unit_tests": 10,
+  "historical_files_unchanged": 94127
+}

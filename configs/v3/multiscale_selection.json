@@ -1,0 +1,1004 @@
+[
+  {
+    "config": {
+      "name": "multi_A",
+      "branch": "A_tree"
+    },
+    "fold": "F1",
+    "objective": "ap",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.7072767677259724,
+        "log_loss": 0.2321159505339431
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6934241467485583,
+        "log_loss": 0.2273426715898807
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6866188838198763,
+        "log_loss": 0.22590756961032463
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6759593803770221,
+        "log_loss": 0.22755854664949052
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.6612515375229626,
+        "log_loss": 0.23214510675792135
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_A",
+      "branch": "A_tree"
+    },
+    "fold": "F1",
+    "objective": "log_loss",
+    "weight_log": 0.5,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.7072767677259724,
+        "log_loss": 0.2321159505339431
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6934241467485583,
+        "log_loss": 0.2273426715898807
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6866188838198763,
+        "log_loss": 0.22590756961032463
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6759593803770221,
+        "log_loss": 0.22755854664949052
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.6612515375229626,
+        "log_loss": 0.23214510675792135
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_B_v2",
+      "branch": "B_v2"
+    },
+    "fold": "F1",
+    "objective": "ap",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6934521947351262,
+        "log_loss": 0.2362448078729154
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6853042902222193,
+        "log_loss": 0.2288849760068054
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6790268124866299,
+        "log_loss": 0.2258020322097194
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6720663885923259,
+        "log_loss": 0.22693311343277087
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.6612515375229626,
+        "log_loss": 0.23214510675792135
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_B_v2",
+      "branch": "B_v2"
+    },
+    "fold": "F1",
+    "objective": "log_loss",
+    "weight_log": 0.5,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6934521947351262,
+        "log_loss": 0.2362448078729154
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6853042902222193,
+        "log_loss": 0.2288849760068054
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6790268124866299,
+        "log_loss": 0.2258020322097194
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6720663885923259,
+        "log_loss": 0.22693311343277087
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.6612515375229626,
+        "log_loss": 0.23214510675792135
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_trajectory",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_sensor_trajectory",
+        "groups": [
+          "sensor_trajectory",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F1",
+    "objective": "ap",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6967503491784663,
+        "log_loss": 0.22946185329712307
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6945113245310426,
+        "log_loss": 0.22375275845609585
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6865919585865887,
+        "log_loss": 0.22252032300450722
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6761495679099501,
+        "log_loss": 0.22542205228296502
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.6612515375229626,
+        "log_loss": 0.23214510675792135
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_trajectory",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_sensor_trajectory",
+        "groups": [
+          "sensor_trajectory",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F1",
+    "objective": "log_loss",
+    "weight_log": 0.5,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6967503491784663,
+        "log_loss": 0.22946185329712307
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6945113245310426,
+        "log_loss": 0.22375275845609585
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6865919585865887,
+        "log_loss": 0.22252032300450722
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6761495679099501,
+        "log_loss": 0.22542205228296502
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.6612515375229626,
+        "log_loss": 0.23214510675792135
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_coherence",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_coherence",
+        "groups": [
+          "aggregate_trajectory",
+          "coherence",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F1",
+    "objective": "ap",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6917046698604014,
+        "log_loss": 0.23093364803396382
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6878407123012109,
+        "log_loss": 0.2260340295605372
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6805048388865554,
+        "log_loss": 0.22477961949184858
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6729619320553832,
+        "log_loss": 0.22687830251586566
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.6612515375229626,
+        "log_loss": 0.23214510675792135
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_coherence",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_coherence",
+        "groups": [
+          "aggregate_trajectory",
+          "coherence",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F1",
+    "objective": "log_loss",
+    "weight_log": 0.5,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6917046698604014,
+        "log_loss": 0.23093364803396382
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6878407123012109,
+        "log_loss": 0.2260340295605372
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6805048388865554,
+        "log_loss": 0.22477961949184858
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6729619320553832,
+        "log_loss": 0.22687830251586566
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.6612515375229626,
+        "log_loss": 0.23214510675792135
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_A",
+      "branch": "A_tree"
+    },
+    "fold": "F2",
+    "objective": "ap",
+    "weight_log": 0.5,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6252358201904384,
+        "log_loss": 0.3658646258835294
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6398103325404704,
+        "log_loss": 0.384352035594646
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6431605660667553,
+        "log_loss": 0.4162739808350433
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.639094728015277,
+        "log_loss": 0.459861995671457
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.630375376997699,
+        "log_loss": 0.5124510169615055
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_A",
+      "branch": "A_tree"
+    },
+    "fold": "F2",
+    "objective": "log_loss",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6252358201904384,
+        "log_loss": 0.3658646258835294
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6398103325404704,
+        "log_loss": 0.384352035594646
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6431605660667553,
+        "log_loss": 0.4162739808350433
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.639094728015277,
+        "log_loss": 0.459861995671457
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.630375376997699,
+        "log_loss": 0.5124510169615055
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_B_v2",
+      "branch": "B_v2"
+    },
+    "fold": "F2",
+    "objective": "ap",
+    "weight_log": 0.25,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6557391759971136,
+        "log_loss": 0.3562425228828556
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6696931363055796,
+        "log_loss": 0.37742193513184563
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6686580592313465,
+        "log_loss": 0.4124073786265459
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6542689720246351,
+        "log_loss": 0.45839535531042175
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.630375376997699,
+        "log_loss": 0.5124510169615055
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_B_v2",
+      "branch": "B_v2"
+    },
+    "fold": "F2",
+    "objective": "log_loss",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6557391759971136,
+        "log_loss": 0.3562425228828556
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6696931363055796,
+        "log_loss": 0.37742193513184563
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6686580592313465,
+        "log_loss": 0.4124073786265459
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6542689720246351,
+        "log_loss": 0.45839535531042175
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.630375376997699,
+        "log_loss": 0.5124510169615055
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_trajectory",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_sensor_trajectory",
+        "groups": [
+          "sensor_trajectory",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F2",
+    "objective": "ap",
+    "weight_log": 0.25,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.668416942069207,
+        "log_loss": 0.3408952413398528
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6769430325504986,
+        "log_loss": 0.3652566361062951
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6717588723719581,
+        "log_loss": 0.40383225696543495
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6549684430074183,
+        "log_loss": 0.4538802995783622
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.630375376997699,
+        "log_loss": 0.5124510169615055
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_trajectory",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_sensor_trajectory",
+        "groups": [
+          "sensor_trajectory",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F2",
+    "objective": "log_loss",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.668416942069207,
+        "log_loss": 0.3408952413398528
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6769430325504986,
+        "log_loss": 0.3652566361062951
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6717588723719581,
+        "log_loss": 0.40383225696543495
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6549684430074183,
+        "log_loss": 0.4538802995783622
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.630375376997699,
+        "log_loss": 0.5124510169615055
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_coherence",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_coherence",
+        "groups": [
+          "aggregate_trajectory",
+          "coherence",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F2",
+    "objective": "ap",
+    "weight_log": 0.25,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6625753486457109,
+        "log_loss": 0.3358838775402355
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6742633235932449,
+        "log_loss": 0.3596164034537319
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6706031483830628,
+        "log_loss": 0.39907381967257743
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6545201068714703,
+        "log_loss": 0.45110841474501495
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.630375376997699,
+        "log_loss": 0.5124510169615055
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_coherence",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_coherence",
+        "groups": [
+          "aggregate_trajectory",
+          "coherence",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F2",
+    "objective": "log_loss",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.6625753486457109,
+        "log_loss": 0.3358838775402355
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.6742633235932449,
+        "log_loss": 0.3596164034537319
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.6706031483830628,
+        "log_loss": 0.39907381967257743
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.6545201068714703,
+        "log_loss": 0.45110841474501495
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.630375376997699,
+        "log_loss": 0.5124510169615055
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_A",
+      "branch": "A_tree"
+    },
+    "fold": "F3",
+    "objective": "ap",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.815196877488267,
+        "log_loss": 0.3878437156902585
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.8116200797710156,
+        "log_loss": 0.4150896865251836
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.8059760372879106,
+        "log_loss": 0.45955726364154226
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.7936713728836562,
+        "log_loss": 0.5218294899693626
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.7725211572455954,
+        "log_loss": 0.6012729152298568
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_A",
+      "branch": "A_tree"
+    },
+    "fold": "F3",
+    "objective": "log_loss",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.815196877488267,
+        "log_loss": 0.3878437156902585
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.8116200797710156,
+        "log_loss": 0.4150896865251836
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.8059760372879106,
+        "log_loss": 0.45955726364154226
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.7936713728836562,
+        "log_loss": 0.5218294899693626
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.7725211572455954,
+        "log_loss": 0.6012729152298568
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_B_v2",
+      "branch": "B_v2"
+    },
+    "fold": "F3",
+    "objective": "ap",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.8261021718112072,
+        "log_loss": 0.3615241182151252
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.8218055043691783,
+        "log_loss": 0.39169543437308474
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.8129842218798885,
+        "log_loss": 0.44211072639801124
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.7977793526389294,
+        "log_loss": 0.5124531912481978
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.7725211572455954,
+        "log_loss": 0.6012729152298568
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_B_v2",
+      "branch": "B_v2"
+    },
+    "fold": "F3",
+    "objective": "log_loss",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.8261021718112072,
+        "log_loss": 0.3615241182151252
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.8218055043691783,
+        "log_loss": 0.39169543437308474
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.8129842218798885,
+        "log_loss": 0.44211072639801124
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.7977793526389294,
+        "log_loss": 0.5124531912481978
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.7725211572455954,
+        "log_loss": 0.6012729152298568
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_trajectory",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_sensor_trajectory",
+        "groups": [
+          "sensor_trajectory",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F3",
+    "objective": "ap",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.8221748525789014,
+        "log_loss": 0.3697261556422578
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.8175181075182777,
+        "log_loss": 0.3986598709911515
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.8097447303438463,
+        "log_loss": 0.44732810259739164
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.795984704374662,
+        "log_loss": 0.5153742676497198
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.7725211572455954,
+        "log_loss": 0.6012729152298568
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_trajectory",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_sensor_trajectory",
+        "groups": [
+          "sensor_trajectory",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F3",
+    "objective": "log_loss",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.8221748525789014,
+        "log_loss": 0.3697261556422578
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.8175181075182777,
+        "log_loss": 0.3986598709911515
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.8097447303438463,
+        "log_loss": 0.44732810259739164
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.795984704374662,
+        "log_loss": 0.5153742676497198
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.7725211572455954,
+        "log_loss": 0.6012729152298568
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_coherence",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_coherence",
+        "groups": [
+          "aggregate_trajectory",
+          "coherence",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F3",
+    "objective": "ap",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.8194140652006514,
+        "log_loss": 0.3615172940480422
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.8163143554103338,
+        "log_loss": 0.39033664958103675
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.8088832129191132,
+        "log_loss": 0.440491728939458
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.7955362372474026,
+        "log_loss": 0.5114052153555033
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.7725211572455954,
+        "log_loss": 0.6012729152298568
+      }
+    ]
+  },
+  {
+    "config": {
+      "name": "multi_coherence",
+      "branch": "joint",
+      "joint": {
+        "name": "joint_coherence",
+        "groups": [
+          "aggregate_trajectory",
+          "coherence",
+          "missing"
+        ],
+        "penalty": 40,
+        "months": 3,
+        "kind": "joint",
+        "source_A": "A_tree"
+      }
+    },
+    "fold": "F3",
+    "objective": "log_loss",
+    "weight_log": 0.0,
+    "inner_mean": [
+      {
+        "weight": 0.0,
+        "ap": 0.8194140652006514,
+        "log_loss": 0.3615172940480422
+      },
+      {
+        "weight": 0.25,
+        "ap": 0.8163143554103338,
+        "log_loss": 0.39033664958103675
+      },
+      {
+        "weight": 0.5,
+        "ap": 0.8088832129191132,
+        "log_loss": 0.440491728939458
+      },
+      {
+        "weight": 0.75,
+        "ap": 0.7955362372474026,
+        "log_loss": 0.5114052153555033
+      },
+      {
+        "weight": 1.0,
+        "ap": 0.7725211572455954,
+        "log_loss": 0.6012729152298568
+      }
+    ]
+  }
+]

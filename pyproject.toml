@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pcs5787-wind-curtailment-bahia"
+version = "1.0.0"
+description = "Reproducible wind curtailment datasets and historical H2 models for Bahia"
+requires-python = ">=3.11,<3.12"
+license = {text = "MIT for original software; see NOTICE.md for data and third-party terms"}
+dependencies = ["numpy==2.4.6", "pandas==3.0.6", "scipy==1.17.1", "scikit-learn==1.9.1", "pyarrow==26.0.0", "lightgbm==4.7.0", "joblib==1.6.0", "threadpoolctl==3.7.0"]
+
+[project.scripts]
+pcs5787-release = "pcs5787.release_tools:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

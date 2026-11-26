@@ -1,0 +1,48 @@
+{
+  "version": "2B-2.0",
+  "status": "Registered before reduced-model training or inspection of reduced final predictions",
+  "scope": "Retrospective additional evaluation; no feature reselection; no claim of a blind test",
+  "timezone": "America/Bahia",
+  "start": "2026-04-01",
+  "stop_exclusive": "2026-10-01",
+  "origins": ["2026-04-01", "2026-05-01", "2026-06-01", "2026-07-01", "2026-08-01", "2026-09-01"],
+  "variants": ["A", "B", "C_top5", "C_spatial"],
+  "frozen_selection": "reports/h2_feature_selection_dev/frozen/selection.json",
+  "frozen_selection_sha256": "ce82cabe3a12b604f92a7b7ff14907dbf17f406c6a20ed2c36c61bf10f2634c3",
+  "selection_roles": {"C_top5": "primary frozen fixed list, distinct from development adaptive policy", "C_spatial": "frozen sensitivity; never retrospectively promoted to primary"},
+  "historical_reference": {"protocol": "P2", "reason": "ENE", "population": "spatial_recent", "algorithm": "lightgbm", "seed": 5787, "variants": ["A", "B"], "n": 34811, "positive": 11521, "regions": 8, "calibration": "none", "retrain": false},
+  "population": "y_ENE_02.notna() & sp_wind.notna(), unchanged for every training and evaluation representation",
+  "clock": {"label_latency_after_hour_end": 168, "forecast_horizon_hours": 1, "train_stop_exclusive": "O - 169 h", "last_admissible_hour": "O - 170 h", "train_start": "(O - 169 h) - 3 calendar months", "meteorology_latest": "t - 2 h"},
+  "row_order": ["time_local", "region"],
+  "reduced_training": {"constructor": "src/pcs5787/v2/learners.py:make_model", "source_parameters": "frozen selection.json configurations.parameters and effective_estimator_parameters", "from_scratch_each_origin": true, "lightgbm": "4.7.0", "seed": 5787, "threads": 4, "fit_categorical_positions": [0, 1, 2, 3, 4, 5], "unknown_categories": "unchanged OrdinalEncoder unknown_value NaN, including month and region_month", "missing": "native NaN plus paired ~isfinite flags", "repeat_determinism": "repeat both reduced April fits once; preserve primary runs only", "early_stopping": false, "additional_calibration": false},
+  "thresholds": {
+    "A_B": "Preserve final_predictions.parquet thresholds; independently reconstruct with selected_oof quad F3 plus previous monthly historical predictions and original available_history/decision_threshold",
+    "reduced_warm_start": "Own monthly OOF predictions from frozen 2B-1, already available before April; no new pre-April models and no retroactive fixed-list refits",
+    "reduced_April": "Verify original rule reproduces frozen C_top5=.24 and C_spatial=.21; use those values",
+    "updates": "Original available_history: [cutoff(O)-90 days, cutoff(O)); original decision_threshold: max F1 on .01 to .99 grid, smallest tie; fallback .5 if n<100 or no positives; append only previous external-origin predictions",
+    "conflict_resolution": "Current explicit user instruction to preserve historical A/B thresholds takes precedence over 2B-1 suggested new A/B warm starts (.28/.22). No frozen file is edited. Reduced warm starts and feature lists stay exactly frozen.",
+    "comparability_caveat": "A/B start from historical F3 and reduced systems from new monthly OOF. C_top5 initial history used adaptive development subsets, while evaluation uses a fixed list. Alert comparisons include these initialization differences; probability metrics do not depend on thresholds."
+  },
+  "contrasts": [
+    {"name": "C_top5_minus_B", "left": "C_top5", "right": "B", "primary_family": true},
+    {"name": "C_spatial_minus_B", "left": "C_spatial", "right": "B", "primary_family": true},
+    {"name": "B_minus_A", "left": "B", "right": "A", "primary_family": false},
+    {"name": "C_top5_minus_A", "left": "C_top5", "right": "A", "primary_family": false},
+    {"name": "C_spatial_minus_A", "left": "C_spatial", "right": "A", "primary_family": false}
+  ],
+  "metrics": ["AP", "Brier", "ROC-AUC", "precision", "recall", "F1", "specificity", "alert_fraction", "prevalence"],
+  "bootstrap": {
+    "routine": "Original WeightedAP exact weighted AP including ties; same multinomial nonoverlapping calendar-block method as 2B-1, strict population equality before alignment",
+    "block_hours": [168, 672], "replicates": 2000, "seeds": {"168": 5955, "672": 6459},
+    "boundaries": "From April 1 00:00 to October 1 00:00 local; final incomplete block retained; calendar never compressed; all regions/models share block multiplicities; empty blocks retained",
+    "nominal_intervals": "percentiles .025 and .975, absolute AP/Brier/F1 and paired differences; all estimates from pooled observations, not mean monthly scores",
+    "simultaneous_lower_AP": "For the two reduced-minus-B contrasts, per block size: q=.975 quantile of max_j((delta*_j-delta_j)/sd_j), L_j=delta_j-q*sd_j; approximate bootstrap maxT. No simultaneous claim for other contrasts or Brier. sd=0 gives standardized error zero.",
+    "scope": "Conditional on fitted models and frozen configuration; no refitting/reselection inside resamples; six dependent months and few long blocks limit coverage claims"
+  },
+  "noninferiority": {"margin_absolute_AP": 0.01, "qualification": "Both nominal and simultaneous lower AP limits strictly greater than -.01 for both 168 and 672 h", "interpretation": "Operational sensitivity convention, not universal scientific margin or equivalence proof", "Brier": "Report signed differences and nominal intervals without post-hoc acceptance margin"},
+  "descriptive_analysis": "Monthly, regional, and month-by-region metrics; prevalence associations descriptive only, no independent-replicate tests or outcome-based feature changes",
+  "figures": ["AP versus meteorological count with effective-entry labels", "monthly reduced-minus-B AP differences", "five paired AP contrasts with both block sizes, primary simultaneous lower limits and NI margin"],
+  "tolerances": {"probability": 1e-12, "metrics": 1e-12},
+  "outputs_only": "reports/h2_feature_selection_eval",
+  "historical_changes_allowed": false
+}
