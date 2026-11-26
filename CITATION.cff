@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: "Cite esta versão e os datasets associados. O DOI foi reservado em 26/11/2026; consulte o estado de publicação no Zenodo."
-title: "Wind Curtailment Prediction in Bahia: Reproducible Data, Models and Scientific Notebook"
+message: "Cite a versão 1.0.0 do software e notebook arquivada no Zenodo e os datasets associados utilizados."
+title: "Wind Curtailment Prediction in Bahia: Reproducible Software and Approved Scientific Notebook"
 type: software
 version: 1.0.0
+date-released: 2026-11-26
 authors:
   - family-names: "de Paula"
     given-names: "Matheus T."

@@ -1,8 +1,8 @@
 # Produtos de dados e arquivo científico
 
-Identificadores reais reservados no Zenodo em 26/11/2026. Na conferência de empacotamento os três registros eram rascunhos; reserva de DOI não significa publicação. Consulte o estado no Zenodo. A comunidade pretendida é [Big Data Analytics Research Group of Escola Politécnica da Universidade de São Paulo](https://zenodo.org/communities/bigdatagroup/); inclusão depende do processo da comunidade.
+Os três produtos foram publicados no Zenodo em **26/11/2026**, na versão **1.0.0**, com acesso público e DOIs resolvendo para os registros. A inclusão na comunidade [Big Data Analytics Research Group of Escola Politécnica da Universidade de São Paulo](https://zenodo.org/communities/bigdatagroup/) foi solicitada depois da publicação; os pedidos estavam pendentes de curadoria na conferência de 26/11/2026. Os registros já estão disponíveis independentemente dessa decisão.
 
-| Produto | DOI reservado | Arquivo principal |
+| Produto | DOI publicado | Arquivo principal |
 |---|---|---|
 | Integrated Wind Curtailment and Meteorological Data for Bahia, Brazil (2022–2026) | [10.5281/zenodo.24549469](https://doi.org/10.5281/zenodo.24549469) | `pcs5787_observational_v1.0.0.zip` |
 | Reproducible Machine Learning Experiments for Wind Curtailment Prediction in Bahia, Brazil | [10.5281/zenodo.24549473](https://doi.org/10.5281/zenodo.24549473) | `pcs5787_experiments_v1.0.0.zip` |
@@ -10,7 +10,7 @@ Identificadores reais reservados no Zenodo em 26/11/2026. Na conferência de emp
 
 ## Obter e conferir
 
-Depois da publicação dos registros, a partir da raiz do clone:
+A partir da raiz do clone, sem autenticação Zenodo:
 
 ```bash
 .venv/bin/python -m pcs5787.obtain_data --destination data
